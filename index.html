@@ -1,0 +1,588 @@
+<!-- Declaration of the Doctype. The <!DOCTYPE> declaration represents the document type, and helps browsers to display web pages correctly. -->
+<!DOCTYPE html>
+
+<!-- every webpage begins and ends with an <html> tag. All elements of the page are inside it. The <html> element is the root element and it defines the whole HTML document. lang="en" is an attribut and defines the language of the page. This is meant to assist search engines and browsers. -->
+<html lang="en">
+
+<!-- the first element that is important is the <head> section of the page. inside the <head></head>, there are the meta informations that define the webpage. -->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {background-color: powderblue;}
+    h6   {color: blue;}
+    blockquote   {color: red;}
+    table, th, td {border: 1px solid black;}
+    th {text-align: left;}
+    table {border-spacing: 5px;}
+
+    .city {
+      background-color: tomato;
+      color: white;
+      border: 2px solid black;
+      margin: 20px;
+      padding: 20px;
+    }
+
+    .main {
+      font-family: Georgia, 'Times New Roman', Times, serif; 
+      font-size: 66px
+    }
+
+    #myHeader {
+      background-color: lightblue;
+      color: black;
+      padding: 40px;
+      text-align: center;
+    } 
+    </style>
+  <title>Document</title>
+</head>
+
+<!-- The <body> element defines the document's body. The body is what the user sees as webpage. All the elements that are inside the <body> are visible to the user. -->
+<body>
+
+  <!-- HTML headings are defined with the <h1> to <h6> tags. <h1> defines the most important heading. <h6> defines the least important heading: -->
+  <h1>This is heading 1</h1>
+  <h2>This is heading 2</h2>
+  <h3>This is heading 3</h3>
+  <h4>This is heading 4</h4>
+  <h5>This is heading 5</h5>
+  <h6>This is heading 6 - blue because of the style attribute in the head section</h6>
+
+  <!-- HTML paragraphs are defined with the <p> tag. A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph. -->
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p> 
+
+  <!-- HTML elements with no content are called empty elements. The <br> tag defines a line break, and is an empty element without a closing tag:-->
+  <p>This is a <br> paragraph with a line break.</p>
+
+  <!-- HTML links are defined with the <a> tag: The link's destination is specified in the href attribute. Attributes are used to provide additional information about HTML elements. -->
+  <a href="https://www.w3schools.com">This is a link</a>
+  <br>
+
+    <!-- HTML images are defined with the <img> tag. The source file (src), alternative text (alt), width, and height are provided as attributes. -->
+  <img src="w3schools.jpg" alt="This is an alternate text. It is shown because the image could not be displayed." width="104" height="142">
+  <br>
+
+  <!-- The path of an images in the src attribute can also be a folder. The required alt attribute for the <img> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to slow connection, or an error in the src attribute, or if the user uses a screen reader.-->
+  <img src="img/buy_high_sell_low.jpg" alt="Buy high sell low." >
+
+  <!-- The style attribute is used to add styles to an element, such as color, font, size, and more. Usually, you do style the elements in an external CSS file and not inline like this. -->
+  <p style="color:blue;">This is a blue paragraph.</p>
+
+  <!-- The title attribute defines some extra information about an element. The value of the title attribute will be displayed as a tooltip when you mouse over the element. -->
+  <p title="I'm a tooltip">This is a parapgraph with title/tooltip.</p>
+
+  <!-- The <hr> tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule. The <hr> element is used to separate content (or define a change) in an HTML page. -->
+  <h1>This is heading 1</h1>
+  <p>This is some text.</p>
+  <hr>
+  <h2>This is heading 2</h2>
+  <p>This is some other text.</p>
+  <hr> 
+
+  <h2>Preformated Text</h2>
+  <!-- The HTML <pre> element defines preformatted text. The text inside a <pre> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks. -->
+  <pre>
+    My Bonnie lies over the ocean.
+  
+    My Bonnie lies over the sea.
+  
+    My Bonnie lies over the ocean.
+  
+    Oh, bring back my Bonnie to me.
+  </pre> 
+
+  <hr>
+
+  <h2>Special HTML Formatting Examples:</h2>
+  <!-- 
+    <b> - Bold text
+    <strong> - Important text
+    <i> - Italic text
+    <em> - Emphasized text
+    <mark> - Marked text
+    <small> - Smaller text
+    <del> - Deleted text
+    <ins> - Inserted text
+    <sub> - Subscript text
+    <sup> - Superscript text
+  -->
+  <b>This text is bold.</b> 
+  <strong>This text is important!</strong> 
+  <i>This text is italic.</i> 
+  <em>This text is emphasized.</em> 
+  <small>This is some smaller text.</small>
+  <p>Do not forget to buy <mark>milk</mark> today.</p>
+  <p>My favorite color is <del>blue</del> red.</p>
+  <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+  <p>This is <sub>subscripted</sub> text.</p>
+  <p>This is <sup>superscripted</sup> text.</p>
+
+  <hr>
+
+  <h2>blockquote, q, abbr, address, cite, and bdo HTML elements.</h2>
+  <!-- The HTML <blockquote> element defines a section that is quoted from another source. Browsers usually indent <blockquote> elements.-->
+  <p>Here is a quote from WWF's website:</p>
+  <blockquote cite="http://www.worldwildlife.org/who/index.html">
+  For 50 years, WWF has been protecting the future of nature.
+  The world's leading conservation organization,
+  WWF works in 100 countries and is supported by
+  1.2 million members in the United States and
+  close to 5 million globally. (This blockquote is red because of the styling in the head section.)
+  </blockquote> 
+
+  <!--The HTML <q> tag defines a short quotation. Browsers normally insert quotation marks around the quotation.-->
+  <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p> 
+
+  <!-- The HTML <abbr> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM" Marking abbreviations can give useful information to browsers, translation systems and search-engines. Tip: Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element. -->
+  <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p> 
+
+  <!-- The HTML <address> tag defines the contact information for the author/owner of a document or an article. The contact information can be an email address, URL, physical address, phone number, social media handle, etc. The text in the <address> element usually renders in italic, and browsers will always add a line break before and after the <address> element. -->
+  <address>
+  Written by John Doe.<br>
+  Visit us at:<br>
+  Example.com<br>
+  Box 564, Disneyland<br>
+  USA
+  </address> 
+  
+  <!-- The HTML <cite> tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.). Note: A person's name is not the title of a work. The text in the <cite> element usually renders in italic.-->
+  <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p> 
+
+  <!-- BDO stands for Bi-Directional Override. The HTML <bdo> tag is used to override the current text direction:-->
+  <bdo dir="rtl">This text will be written from right to left</bdo>
+
+  <hr>
+  <h2>Links</h2>
+  <!-- By default, links will appear as follows in all browsers: An unvisited link is underlined and blue. A visited link is underlined and purple. An active link is underlined and red
+  -->
+  <a href="https://www.w3schools.com/">Normal link</a>
+  <br> 
+
+  <!-- By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link. The target attribute specifies where to open the linked document. The target attribute can have one of the following values: 
+    _self - Default. Opens the document in the same window/tab as it was clicked
+    _blank - Opens the document in a new window or tab
+    _parent - Opens the document in the parent frame
+    _top - Opens the document in the full body of the window
+  -->
+  <a href="https://www.w3schools.com/" target="_self">This link opens in the same window/tab as it was clicked</a>
+  <br> 
+  <a href="https://www.w3schools.com/" target="_blank">This link opens the document in a new window or tab</a> 
+  <br>
+  <a href="https://www.w3schools.com/" target="_parent">This link opens the document in the parent frame</a> 
+  <br>
+  <a href="https://www.w3schools.com/" target="_top">This link opens the document in the full body of the window</a> 
+
+  <!-- Opens Absolute URL's-->
+  <h3>Absolute URLs</h3>
+  <p><a href="https://www.w3.org/">W3C</a></p>
+  <p><a href="https://www.google.com/">Google</a></p>
+  
+  <!-- Opens Relative URL's (a link to a page within the same website)-->
+  <h3>Relative URLs</h3>
+  <p><a href="second.html">Second Page</a></p>
+  <p><a href="img/chakra.jpg">Picture in the Website Folder</a></p> 
+
+  <!-- To use an image as a link, just put the <img> tag inside the <a> tag: -->
+  <a href="default.asp">
+    <img src="img/buy_high_sell_low.jpg" alt="HTML tutorial" style="width:42px;height:42px;">
+  </a>
+  <br>
+
+  <!-- Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email): -->
+  <a href="mailto:robin.wahl@protonmail.com">Send email</a> 
+  <br>
+
+  <!-- To use an HTML button as a link, you have to add some JavaScript code. JavaScript allows you to specify what happens at certain events, such as a click of a button: -->
+  <button onclick="document.location='button.html'">Click here</button> 
+
+  <!-- Create a bookmark in HTML: First use the id attribute to create a bookmark. Then add a link to the bookmark ("Jump to Chapter 4"), from within the same page. (You can also add a link to a bookmark on another page)-->
+  <h3 id="C4">Bookmarks</h3>
+  <a href="#C4">Jump to bookmark on this page</a> 
+  <br>
+  <a href="outside.html">Jump to outside bookmark</a>
+
+  <hr>
+  <h2>Image Maps</h2>
+  <p>Click on the picture and see what happens!</p>
+  <!-- The HTML <map> tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more <area> tags. The usemap value starts with a hash tag # followed by the name of the image map, and is used to create a relationship between the image and the image map.-->
+  <img src="img/workplace.jpg" alt="Workplace" usemap="#workmap">
+
+  <!-- The idea behind an image map is that you should be able to perform different actions depending on where in the image you click. The <map> element is used to create an image map, and is linked to the image by using the required name attribute. The name attribute must have the same value as the <img>'s usemap attribute.
+  -->
+  <map name="workmap">
+
+    <!-- You must define the shape of the clickable area, and you can choose one of these values:
+
+    rect - defines a rectangular region
+    circle - defines a circular region
+    poly - defines a polygonal region
+    default - defines the entire region
+  
+    The coordinates for shape="rect" come in pairs, one for the x-axis and one for the y-axis.
+    -->
+    <area shape="rect" coords="34,44,270,350" alt="Computer" onclick="alert('You clicked the Computer!')">
+    <area shape="rect" coords="290,172,333,250" alt="Phone" onclick="alert('You clicked the Phone!')">
+
+    <!-- To add a circle area, first locate the coordinates of the center of the circle (337px and 300px). Then specify the radius of the circle (44px)-->
+    <area shape="circle" coords="337,300,44" alt="Coffee" onclick="alert('You clicked the Coffee!')">
+  </map> 
+
+  <p>Click on the croissant!</p>
+  <!-- shape="poly" can be used to create any shape. It contains several coordinate points, which creates a shape formed with straight lines (a polygon). -->
+  <img src="img/frenchfood.jpg" alt="Workplace" usemap="#croissant">
+
+  <map name="croissant">
+    <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" onclick="alert('You clicked the Croissant!')"> 
+
+  <hr>
+  <h2>Picture Tag</h2>
+  <!-- The HTML <picture> element gives web developers more flexibility in specifying image resources. The <picture> element contains one or more <source> elements, each referring to different images through the srcset attribute. This way the browser can choose the image that best fits the current view and/or device. Each <source> element has a media attribute that defines when the image is the most suitable.-->
+  <picture>
+    <source media="(min-width: 650px)" srcset="img/chakra.jpg">
+    <source media="(min-width: 465px)" srcset="img/buy_high_sell_low.jpg">
+    <img src="img/frenchfood.jpg">
+  </picture> 
+  <p>Try to resize the screen to see what happens!</p>
+
+  <hr>
+  <h2>HTML Tables</h2>
+  <p>This is a standard HTML table:</p>
+  <!-- HTML tables allow web developers to arrange data into rows and columns. The <table> tag defines an HTML table. Each table row is defined with a <tr> tag. Each table header is defined with a <th> tag. Each table data/cell is defined with a <td> tag. By default, the text in <th> elements are bold and centered. By default, the text in <td> elements are regular and left-aligned.-->
+  <table style="width:100%">
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+    </tr>
+  </table> 
+
+  <!-- Note: The <td> elements are the data containers of the table.
+  They can contain all sorts of HTML elements; text, images, lists, other tables, etc.-->
+
+  <!-- To add a border to a table, use the CSS border property. (See in style in the head section of the document) Remember to define borders for both the table and the table cells.
+
+  -->
+
+  <br>
+  <p>This table has a cell span in a column in it (Telephone):</p>
+
+  <!-- To make a cell span more than one column, use the colspan attribute: -->
+  <table style="width:100%">
+    <tr>
+      <th>Name</th>
+      <th colspan="2">Telephone</th>
+    </tr>
+    <tr>
+      <td>Bill Gates</td>
+      <td>55577854</td>
+      <td>55577855</td>
+    </tr>
+  </table> 
+
+  <br>
+  <p>This table has a cell span in a row in it (Telephone):</p>
+
+  <!-- To make a cell span more than one row, use the rowspan attribute: -->
+  <table style="width:100%">
+    <tr>
+      <th>Name:</th>
+      <td>Bill Gates</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Telephone:</th>
+      <td>55577854</td>
+    </tr>
+    <tr>
+      <td>55577855</td>
+    </tr>
+  </table> 
+
+  <p>This table has a caption in it:</p>
+  <table style="width:100%">
+    <caption>Monthly savings</caption>
+    <tr>
+      <th>Month</th>
+      <th>Savings</th>
+    </tr>
+    <tr>
+      <td>January</td>
+      <td>$100</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$50</td>
+    </tr>
+  </table> 
+
+  <hr> 
+
+  <h2>HTML Lists</h2>
+  <h3>Unordered List</h3>
+  <!-- An unordered list starts with the <ul> tag. Each list item starts with the <li> tag. The list items will be marked with bullets (small black circles) by default: -->
+  <ul>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ul> 
+
+  <h3>Ordered List</h3>
+  <!-- An ordered list starts with the <ol> tag. Each list item starts with the <li> tag. The list items will be marked with numbers by default: -->
+  <ol>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol> 
+
+  <h3>Description List</h3>
+  <!-- HTML also supports description lists. A description list is a list of terms, with a description of each term. The <dl> tag defines the description list, the <dt> tag defines the term (name), and the <dd> tag describes each term: -->
+  <dl>
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+  </dl> 
+
+  <h3>Nested Lists</h3>
+  <!-- Lists can be nested (list inside list). Note: A list item (<li>) can contain a new list, and other HTML elements, like images and links, etc.-->
+  <ul>
+    <li>Coffee</li>
+    <li>Tea
+      <ul>
+        <li>Black tea</li>
+        <li>Green tea</li>
+      </ul>
+    </li>
+    <li>Milk</li>
+  </ul> 
+
+  <h3>Ordered List - the Type Attribute</h3>
+  <!-- The type attribute of the <ol> tag, defines the type of the list item marker:
+    type="1" 	The list items will be numbered with numbers (default)
+    type="A" 	The list items will be numbered with uppercase letters
+    type="a" 	The list items will be numbered with lowercase letters
+    type="I" 	The list items will be numbered with uppercase roman numbers
+    type="i" 	The list items will be numbered with lowercase roman numbers 
+  -->
+
+  <h4>Numbers</h4>
+  <ol type="1">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol> 
+
+  <h4>Uppercase Letters</h4>
+  <ol type="A">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol> 
+
+  <h4>Lowercase Letters</h4>
+  <ol type="a">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol> 
+
+  <h4>Uppercase Roman Numbers</h4>
+  <ol type="I">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol> 
+
+  <h4>Lowercase Roman Numbers</h4>
+  <ol type="i">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol> 
+  
+  <h4>Control List Counting</h4>
+  <!-- By default, an ordered list will start counting from 1. If you want to start counting from a specified number, you can use the start attribute: -->
+  <ol start="50">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+  </ol> 
+
+  <h4>Ordered Lists can also be nested</h4>
+  <ol>
+    <li>Coffee</li>
+    <li>Tea
+      <ol>
+        <li>Black tea</li>
+        <li>Green tea</li>
+      </ol>
+    </li>
+    <li>Milk</li>
+  </ol> 
+
+  <hr>
+
+  <h2>HTML Block and Inline Elements</h2>
+  <!-- Every HTML element has a default display value, depending on what type of element it is. There are two display values: block and inline. -->
+
+  <h3>Block-level Elements</h3>
+  <!-- A block-level element always starts on a new line. A block-level element always takes up the full width available (stretches out to the left and right as far as it can). A block level element has a top and a bottom margin, whereas an inline element does not. The <div> element is a block-level element. -->
+  <div>Hello, I am a div.</div>
+
+  <!-- These are all the block-elements in HTML:
+
+  <address>
+  <article>
+  <aside>
+  <blockquote>
+  <canvas>
+  <dd>
+  <div>
+  <dl>
+  <dt>
+  <fieldset>
+  <figcaption>
+  <figure>
+  <footer>
+  <form>
+  <h1>-<h6>
+  <header>
+  <hr>
+  <li>
+  <main>
+  <nav>
+  <noscript>
+  <ol>
+  <p>
+  <pre>
+  <section>
+  <table>
+  <tfoot>
+  <ul>
+  <video>
+
+  -->
+
+  <h3>Inline Elements</h3>
+  <!-- An inline element does not start on a new line. An inline element only takes up as much width as necessary. This is a <span> element inside a paragraph.-->
+  <span>I am a Span paragraph.</span> 
+
+  <!-- Here are the inline elements in HTML: 
+  <a>
+  <abbr>
+  <acronym>
+  <b>
+  <bdo>
+  <big>
+  <br>
+  <button>
+  <cite>
+  <code>
+  <dfn>
+  <em>
+  <i>
+  <img>
+  <input>
+  <kbd>
+  <label>
+  <map>
+  <object>
+  <output>
+  <q>
+  <samp>
+  <script>
+  <select>
+  <small>
+  <span>
+  <strong>
+  <sub>
+  <sup>
+  <textarea>
+  <time>
+  <tt>
+  <var>
+
+  -->
+
+  <h3>The div Element</h3>
+  <!-- The <div> element is often used as a container for other HTML elements. The <div> element has no required attributes, but style, class and id are common. When used together with CSS, the <div> element can be used to style blocks of content: -->
+  <div style="background-color:black;color:white;padding:20px;">
+    <h2>London</h2>
+    <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+  </div> 
+
+  <h3>The span Element</h3>
+  <!-- The <span> element is an inline container used to mark up a part of a text, or a part of a document. The <span> element has no required attributes, but style, class and id are common. When used together with CSS, the <span> element can be used to style parts of the text: -->
+  <p>My mother has <span style="color:blue;font-weight:bold">blue</span> eyes and my father has <span style="color:darkolivegreen;font-weight:bold">dark green</span> eyes.</p>
+
+  <hr>
+
+  <h2>HTML class Attribute</h2>
+  <!-- The HTML class attribute is used to specify a class for an HTML element. Multiple HTML elements can share the same class. -->
+
+  <h3>Using the class Attribute</h3>
+  <!-- The class attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript to access and manipulate elements with the specific class name. In the following example we have three <div> elements with a class attribute with the value of "city". All of the three <div> elements will be styled equally according to the .city style definition in the head section: -->
+  <div class="city">
+    <h2>London</h2>
+    <p>London is the capital of England.</p>
+  </div>
+  
+  <div class="city">
+    <h2>Paris</h2>
+    <p>Paris is the capital of France.</p>
+  </div>
+  
+  <div class="city">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+  
+  <h3>Multiple Classes</h3>
+  <!-- HTML elements can belong to more than one class. To define multiple classes, separate the class names with a space, e.g. <div class="city main">. The element will be styled according to all the classes specified. -->
+  <p class="city main">London</p>
+  <p class="city">Paris</p>
+  <p class="city">Tokyo</p>
+
+  <hr>
+
+  <h2>HTML id Attribute</h2>
+  <!-- The HTML id attribute is used to specify a unique id for an HTML element. You cannot have more than one element with the same id in an HTML document. -->
+  
+  <h3>Using the id Attribute</h3>
+  <!-- The id attribute specifies a unique id for an HTML element. The value of the id attribute must be unique within the HTML document. The id attribute is used to point to a specific style declaration in a style sheet. It is also used by JavaScript to access and manipulate the element with the specific id. The syntax for id is: write a hash character (#), followed by an id name. Then, define the CSS properties within curly braces {}. -->
+  <h6 id="myHeader">My Header (With myHeader id)</h6>
+    
+  <h3>Difference between Class and ID</h3>
+  <p>A class name can be used by multiple HTML elements, while an id name must only be used by one HTML element within the page.</p>
+
+  <h2>HTML IFrames</h2>
+  <!-- An HTML iframe is used to display a web page within a web page.
+  The HTML <iframe> tag specifies an inline frame. An inline frame is used to embed another document within the current HTML document. -->
+  <iframe src="iframe.html" height="200" width="300" titel="IFrame Example"></iframe>
+
+  <br>
+
+  <!-- An iframe can be used as the target frame for a link. The target attribute of the link must refer to the name attribute of the iframe: -->
+  <iframe src="iframe.html" name="iframe_a" title="Iframe Link Example"></iframe>
+
+  <p><a href="https://www.youtube.com" target="iframe_a">Click here and see what happens.</a></p> 
+
+
+
+
+
+</body>
+</html>
