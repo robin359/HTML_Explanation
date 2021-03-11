@@ -1386,6 +1386,8 @@
     Notice that each input field must have a name attribute to be submitted. If the name attribute is omitted, the value of the input field will not be sent at all.
   -->
 
+  <hr>
+
   <h2>HTML Form Attributes</h2>
   <!-- This chapter describes the different attributes for the HTML <form> element -->
   
@@ -1524,7 +1526,272 @@
     </tr>
     </tbody>
   </table>
+
+  <hr>
+
+  <h2>HTML Form Elements</h2>
+  <!-- This chapter describes all the different HTML form elements -->
+
+  <h3>The select Element</h3>
+  <!-- The <select> element defines a drop-down list -->
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select> 
+
+  <!-- The <option> elements defines an option that can be selected. By default, the first item in the drop-down list is selected. To define a pre-selected option, add the selected attribute to the option: -->
+  <option value="fiat" selected>Fiat</option> 
+
+  <h4>Visible Values</h4>
+  <!-- Use the size attribute to specify the number of visible values -->
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="3">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select> 
+
+  <h4>Allow multiple selections</h4>
+  <!-- Use the multiple attribute to allow the user to select more than one value -->
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="4" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
   
+  <h3>The textarea Element</h3>
+  <!-- The <textarea> element defines a multi-line input field (a text area) -->
+  <textarea name="message" rows="10" cols="30">
+    The cat was playing in the garden.
+  </textarea> 
+
+  <!-- The rows attribute specifies the visible number of lines in a text area. The cols attribute specifies the visible width of a text area. You can also define the size of the text area by using CSS  -->
+  <textarea name="message" style="width:200px; height:600px;">
+    The cat was playing in the garden.
+  </textarea>
+
+  <h3>The button Element</h3>
+  <!-- The <button> element defines a clickable button -->
+  <button type="button" onclick="alert('Hello World!')">Click Me!</button> 
+  <p><b>Note: </b>Always specify the type attribute for the button element. Different browsers may use different default 
+  types for the button element.</p>
+
+  <h3>The fieldset and legend Elements</h3>
+  <!-- The <fieldset> element is used to group related data in a form. The <legend> element defines a caption for the <fieldset> element -->
+  <form action="/action_page.php">
+    <fieldset>
+      <legend>Personalia:</legend>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname" value="John"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form> 
+
+  <h3>The datalist Element</h3>
+  <!-- The <datalist> element specifies a list of pre-defined options for an <input> element. Users will see a drop-down list of the pre-defined options as they input data. The list attribute of the <input> element, must refer to the id attribute of the <datalist> element -->
+  <form action="/action_page.js">
+    <input list="browsers">
+    <datalist id="browsers">
+      <option value="Internet Explorer">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+  </form>
+
+  <hr>
+
+  <h2>HTML Input Types</h2>
+  <!-- These are the input Types HTML supports -->
+  <input type="button" value="Button">
+  <br>
+  <input type="checkbox">
+  <br>
+  <input type="color">
+  <br>
+  <input type="date">
+  <br>
+  <input type="datetime-local">
+  <br>
+  <input type="email" placeholder="example@gmail.com">
+  <br>
+  <input type="file">
+  <br>
+  <input type="hidden">
+  <br>
+  <input type="image">
+  <br>
+  <input type="month">
+  <br>
+  <input type="number" placeholder="Number">
+  <br>
+  <input type="password" placeholder="Password">
+  <br>
+  <input type="radio">
+  <br>
+  <input type="range">
+  <br>
+  <input type="reset">
+  <br>
+  <input type="search" placeholder="Search">
+  <br>
+  <input type="submit">
+  <br>
+  <input type="tel" placeholder="Phone Number">
+  <br>
+  <input type="text" placeholder="Simple Text">
+  <br>
+  <input type="time">
+  <br>
+  <input type="url" placeholder="URL">
+  <br>
+  <input type="week">
+
+  <hr>
+
+  <h2>HTML Input Attributes</h2>
+
+  <h3>The value Attribute</h3>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe">
+  </form> 
+
+  <h3>The readonly Attribute</h3>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John" readonly><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe">
+  </form> 
+
+  <h3>The disables Attribute</h3>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John" disabled><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe">
+  </form> 
+
+  <h3>The size Attribute</h3>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" size="50"><br>
+    <label for="pin">PIN:</label><br>
+    <input type="text" id="pin" name="pin" size="4">
+  </form> 
+
+  <h3>The maxlength Attribute</h3>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" size="50"><br>
+    <label for="pin">PIN:</label><br>
+    <input type="text" id="pin" name="pin" maxlength="4" size="4">
+  </form> 
+
+  <h3>The min and max Attributes</h3>
+  <form>
+    <label for="datemax">Enter a date before 1980-01-01:</label>
+    <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+  
+    <label for="datemin">Enter a date after 2000-01-01:</label>
+    <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+  
+    <label for="quantity">Quantity (between 1 and 5):</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="5">
+  </form> 
+
+  <h3>The multiple Attribute</h3>
+  <form>
+    <label for="files">Select files:</label>
+    <input type="file" id="files" name="files" multiple>
+  </form> 
+
+  <h3>The pattern Attribute</h3>
+  <form>
+    <label for="country_code">Country code:</label>
+    <input type="text" id="country_code" name="country_code"
+    pattern="[A-Za-z]{3}" title="Three letter country code">
+  </form>
+
+  <h3>The placeholder Attribute</h3>
+  <form>
+    <label for="phone">Enter a phone number:</label>
+    <input type="tel" id="phone" name="phone"
+    placeholder="123-45-678"
+    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+  </form> 
+
+  <h3>The required Attribute</h3>
+  <form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+  </form> 
+
+  <h3>The step Attribute</h3>
+  <form>
+    <label for="points">Points:</label>
+    <input type="number" id="points" name="points" step="3">
+  </form> 
+
+  <h3>The autofocus Attribute</h3>
+  <form>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" autofocus><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname">
+  </form> 
+
+  <h3>The height and width Atttributes</h3>
+  <form>
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <input type="image" src="img/chakra.jpg" alt="Submit" width="48" height="48">
+  </form> 
+
+  <h3>The list Attribute</h3>
+  <form>
+    <input list="browsers">
+    <datalist id="browsers">
+      <option value="Internet Explorer">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+  </form> 
+
+  <h3>The autocomplete Attribute</h3>
+  <form action="/action_page.js" autocomplete="on">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" autocomplete="off"><br><br>
+    <input type="submit" value="Submit">
+  </form> 
+
+  <p>More coming soon ...</p>
+
+
+
+
+
+
 
     
 </body>
